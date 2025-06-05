@@ -9,6 +9,12 @@ body {
     margin: 0; /* */
     line-height: 1.6; /* Melhora a legibilidade */
 }
+.imagem_logo{
+        height: 250px; /* Defina uma altura fixa para a área da imagem */
+        width: 100%; /* Largura total do container */
+        object-fit: contain; /* Para mostrar a imagem inteira, pode deixar espaços em branco */
+
+}
 
 h1 {
     text-align: center; /* */
@@ -41,7 +47,7 @@ h1 {
     background-color: #1e1e1e; /* Cor de fundo do card */
     border-radius: 12px; /* Bordas arredondadas */
     padding: 20px; /* Espaçamento interno do card */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra do card */
+    box-shadow: 0 4px 15px rgba(133, 24, 24, 0.5); /* Sombra do card */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
     overflow: hidden; /* Garante que conteúdo não vaze das bordas arredondadas */
     border: 1px solid #2c2c2c; /* Borda sutil para definir o card */
@@ -49,7 +55,7 @@ h1 {
 
 .card:hover {
     transform: translateY(-5px) scale(1.03); /* Efeito de "levantar" e aumentar no hover */
-    box-shadow: 0 8px 25px rgba(255, 165, 0, 0.3); /* Sombra com cor de destaque no hover */
+    box-shadow: 0 8px 25px rgba(224, 82, 0, 0.3); /* Sombra com cor de destaque no hover */
 }
 
 .card img {
@@ -165,7 +171,7 @@ h1 {
   background-color: #1e1e1e; 
   border-radius: 12px; 
   padding: 20px; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 1px 15px rgba(255, 255, 255, 0.5); 
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
   overflow: hidden; 
   border: 1px solid #2c2c2c; 
