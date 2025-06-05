@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dragon Ball - Personagens</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dragon Ball - Personagens</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <h1>Personagens de Dragon Ball</h1>
-  <div id="personagens">Carregando personagens...</div>
-<script src="script.js"></script>
+    <h1>Personagens de Dragon Ball</h1>
+
+    <div id="filtros-personagens"
+        style="margin-bottom: 20px; text-align: center; padding: 15px; background-color: #1e1e1e; border-radius: 8px;">
+        <input type="text" id="filtro-nome" placeholder="Nome do personagem"
+            style="padding: 10px; margin-right: 10px; border-radius: 5px; border: 1px solid #333; background-color: #2c2c2c; color: #e0e0e0;">
+        <select id="filtro-raca"
+            style="padding: 10px; margin-right: 10px; border-radius: 5px; border: 1px solid #333; background-color: #2c2c2c; color: #e0e0e0;">
+            <option value="">Todas as Raças</option>
+            <option value="Saiyan">Saiyan</option>
+            <option value="Human">Human</option>
+            <option value="Namekian">Namekian</option>
+            <option value="Frieza Race">Frieza Race</option>
+            <option value="Android">Android</option>
+            <option value="Majin">Majin</option>
+            <option value="Jiren Race">Jiren Race</option>
+        </select>
+        <button id="btn-aplicar-filtros"
+            style="padding: 10px 20px; background-color: #ffa500; color: #121212; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Filtrar</button>
+    </div>
+
+    <div id="personagens">
+    </div>
+
+    <div id="paginacao-controles">
+        <button id="btn-anterior" disabled>Anterior</button>
+        <span id="info-pagina">Página - de -</span>
+        <button id="btn-proxima" disabled>Próxima</button>
+    </div>
+
+    <div id="character-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close-button">&times;</span>
+            <img id="modal-image" src="" alt="Imagem do Personagem" />
+            <h2 id="modal-name"></h2>
+            <p><strong>Raça:</strong> <span id="modal-race"></span></p>
+            <p><strong>KI Base:</strong> <span id="modal-ki"></span></p>
+            <p><strong>KI Máximo:</strong> <span id="modal-maxKi"></span></p>
+            <p><strong>Afiliação:</strong> <span id="modal-affiliation"></span></p>
+            <div id="modal-transformations-container" style="display: none;">
+                <h3>Transformações:</h3>
+                <ul id="modal-transformations-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
